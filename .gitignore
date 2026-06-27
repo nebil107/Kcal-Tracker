@@ -1,0 +1,21 @@
+# Von XcodeGen generiert – wird auf dem CI-Runner erzeugt, nicht eingecheckt.
+*.xcodeproj/
+
+# Build-Ausgaben
+build/
+DerivedData/
+*.ipa
+Payload/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# macOS / Xcode Müll
+.DS_Store
+xcuserdata/
+*.xcuserstate
+
+# Server-Geheimnisse NIEMALS committen (nur .env.example gehört ins Repo)
+.env
+server/.env

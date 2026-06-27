@@ -1,0 +1,53 @@
+name: kalorienplaner-sync
+
+# Produktions-Setup: kleiner Sync-Dienst hinter Caddy (automatisches HTTPS).
+# Alle Geheimnisse/Domain kommen aus der .env (siehe .env.example).
+#
+# Start:   docker compose up -d --build
+# Logs:    docker compose logs -f
+# In Portainer: als "Stack" hinzufügen, Env-Variablen setzen, deploy.
+
+services:
+  sync:
+    build: .
+    image: kalorienplaner-sync:latest
+    restart: unless-stopped
+    environment:
+      SYNC_API_KEY: ${SYNC_API_KEY:?SYNC_API_KEY muss in der .env gesetzt sein}
+      SYNC_DATA_DIR: /data
+      SYNC_LISTEN_ADDR: ":8080"
+      SYNC_MAX_BODY_BYTES: ${SYNC_MAX_BODY_BYTES:-52428800}
+    volumes:
+      - sync-data:/data
+    networks:
+      - internal
+    # Direkter HTTP-Zugriff NUR für lokalen Test / wenn du einen EIGENEN Reverse-Proxy nutzt.
+    # Fürs offene Internet niemals ohne TLS! Stattdessen den caddy-Dienst unten verwenden.
+    # ports:
+    #   - "8080:8080"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      - sync
+    environment:
+      SYNC_DOMAIN: ${SYNC_DOMAIN:?SYNC_DOMAIN (deine Domain, z. B. sync.example.com) muss in der .env gesetzt sein}
+      ACME_EMAIL: ${ACME_EMAIL:-}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    networks:
+      - internal
+
+networks:
+  internal:
+
+volumes:
+  sync-data:
+  caddy-data:
+  caddy-config:

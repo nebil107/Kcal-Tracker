@@ -1,0 +1,13 @@
+# Caddy v2 – automatisches HTTPS (Let's Encrypt) für deine Domain.
+# Werte kommen aus den Umgebungsvariablen (siehe .env / docker-compose.yml).
+
+{
+	# Optionale Kontakt-E-Mail für Let's Encrypt (Ablauf-Benachrichtigungen).
+	email {$ACME_EMAIL}
+}
+
+{$SYNC_DOMAIN} {
+	encode gzip
+	# Leitet alle Anfragen an den internen Sync-Dienst weiter.
+	reverse_proxy sync:8080
+}

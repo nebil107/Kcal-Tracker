@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "_hinweis": "Vorlage mit generischen Referenzwerten je 100 g. Passe Werte, Kategorien und Behälter-Gewichte in der App an deine echten Produkte an. Eintraege mit '(BITTE ANPASSEN)' sind Platzhalter.",
+
+  "foods": [
+    { "name": "Vollmilch 3,5 %", "kategorie": "Milchprodukte", "kcalPro100g": 64, "proteinPro100g": 3.4, "fettPro100g": 3.6, "kohlenhydratePro100g": 4.8, "standardPortion_g": 250, "shakeTauglich": true, "tageszeiten": ["egal"] },
+    { "name": "Magerquark", "kategorie": "Milchprodukte", "kcalPro100g": 67, "proteinPro100g": 12, "fettPro100g": 0.3, "kohlenhydratePro100g": 4, "standardPortion_g": 250, "shakeTauglich": true, "tageszeiten": ["egal"] },
+    { "name": "Skyr", "kategorie": "Milchprodukte", "kcalPro100g": 63, "proteinPro100g": 11, "fettPro100g": 0.2, "kohlenhydratePro100g": 4, "standardPortion_g": 200, "shakeTauglich": true, "tageszeiten": ["egal"] },
+    { "name": "Griechischer Joghurt 10 %", "kategorie": "Milchprodukte", "kcalPro100g": 115, "proteinPro100g": 9, "fettPro100g": 6, "kohlenhydratePro100g": 4, "standardPortion_g": 200, "shakeTauglich": true, "tageszeiten": ["egal"] },
+
+    { "name": "Haferflocken", "kategorie": "Shake-Zutaten", "kcalPro100g": 370, "proteinPro100g": 13, "fettPro100g": 7, "kohlenhydratePro100g": 60, "standardPortion_g": 60, "shakeTauglich": true, "tageszeiten": ["fruehstueck"] },
+    { "name": "Banane", "kategorie": "Shake-Zutaten", "kcalPro100g": 89, "proteinPro100g": 1.1, "fettPro100g": 0.3, "kohlenhydratePro100g": 23, "standardPortion_g": 120, "shakeTauglich": true, "tageszeiten": ["egal"] },
+    { "name": "Erdnussmus", "kategorie": "Shake-Zutaten", "kcalPro100g": 600, "proteinPro100g": 25, "fettPro100g": 50, "kohlenhydratePro100g": 12, "standardPortion_g": 20, "shakeTauglich": true, "tageszeiten": ["egal"] },
+    { "name": "Proteinpulver (BITTE ANPASSEN)", "kategorie": "Shake-Zutaten", "kcalPro100g": 375, "proteinPro100g": 75, "fettPro100g": 6, "kohlenhydratePro100g": 8, "standardPortion_g": 30, "shakeTauglich": true, "tageszeiten": ["egal"] },
+
+    { "name": "Hähnchenbrust (gegart)", "kategorie": "Eiweißquellen", "kcalPro100g": 165, "proteinPro100g": 31, "fettPro100g": 3.6, "kohlenhydratePro100g": 0, "standardPortion_g": 150, "kochAufwand": "mittel", "tageszeiten": ["mittag", "abend"] },
+    { "name": "Thunfisch (Dose, abgetropft)", "kategorie": "Eiweißquellen", "kcalPro100g": 116, "proteinPro100g": 26, "fettPro100g": 1, "kohlenhydratePro100g": 0, "standardPortion_g": 140, "tageszeiten": ["mittag", "abend"] },
+    { "name": "Ei (Größe M)", "kategorie": "Eiweißquellen", "istFestePortion": true, "festeKcal": 78, "festeProtein": 6.3, "festeFett": 5.3, "festeKohlenhydrate": 0.6, "portionsName": "Ei", "standardPortion_g": 60, "tageszeiten": ["fruehstueck"] },
+
+    { "name": "Reis (gekocht)", "kategorie": "Kohlenhydrate", "kcalPro100g": 130, "proteinPro100g": 2.7, "fettPro100g": 0.3, "kohlenhydratePro100g": 28, "standardPortion_g": 200, "kochAufwand": "mittel", "tageszeiten": ["mittag", "abend"] },
+    { "name": "Nudeln (gekocht)", "kategorie": "Kohlenhydrate", "kcalPro100g": 158, "proteinPro100g": 5.8, "fettPro100g": 0.9, "kohlenhydratePro100g": 31, "standardPortion_g": 250, "kochAufwand": "mittel", "tageszeiten": ["mittag", "abend"] },
+    { "name": "Kartoffeln (gekocht)", "kategorie": "Kohlenhydrate", "kcalPro100g": 87, "proteinPro100g": 2, "fettPro100g": 0.1, "kohlenhydratePro100g": 20, "standardPortion_g": 250, "kochAufwand": "wenig", "tageszeiten": ["mittag", "abend"] },
+    { "name": "Vollkornbrot", "kategorie": "Kohlenhydrate", "istFestePortion": true, "festeKcal": 100, "festeProtein": 4, "festeFett": 1, "festeKohlenhydrate": 18, "portionsName": "Scheibe", "standardPortion_g": 45, "tageszeiten": ["fruehstueck", "abend"] },
+
+    { "name": "Apfel", "kategorie": "Obst & Gemüse", "kcalPro100g": 52, "proteinPro100g": 0.3, "fettPro100g": 0.2, "kohlenhydratePro100g": 14, "standardPortion_g": 150, "tageszeiten": ["egal"] },
+    { "name": "Brokkoli (gekocht)", "kategorie": "Obst & Gemüse", "kcalPro100g": 35, "proteinPro100g": 2.4, "fettPro100g": 0.4, "kohlenhydratePro100g": 7, "standardPortion_g": 200, "kochAufwand": "wenig", "tageszeiten": ["mittag", "abend"] },
+
+    { "name": "Olivenöl", "kategorie": "Fette & Nüsse", "kcalPro100g": 884, "proteinPro100g": 0, "fettPro100g": 100, "kohlenhydratePro100g": 0, "standardPortion_g": 10, "tageszeiten": ["egal"] },
+    { "name": "Mandeln", "kategorie": "Fette & Nüsse", "kcalPro100g": 579, "proteinPro100g": 21, "fettPro100g": 50, "kohlenhydratePro100g": 22, "standardPortion_g": 30, "tageszeiten": ["egal"] },
+
+    { "name": "Proteinriegel (BITTE ANPASSEN)", "kategorie": "Snacks", "istFestePortion": true, "festeKcal": 200, "festeProtein": 20, "festeFett": 7, "festeKohlenhydrate": 20, "portionsName": "Riegel", "standardPortion_g": 50, "tags": ["snack"], "tageszeiten": ["snack"] },
+
+    { "name": "Eigenes Lebensmittel (Vorlage – bitte ausfüllen)", "kategorie": "Eigene Lebensmittel", "kcalPro100g": 0, "proteinPro100g": 0, "fettPro100g": 0, "kohlenhydratePro100g": 0, "standardPortion_g": 100, "tageszeiten": ["egal"] }
+  ],
+
+  "behaelter": [
+    { "name": "Glas", "tara_g": 200 },
+    { "name": "Shaker", "tara_g": 90 },
+    { "name": "Kleine Schüssel (BITTE WIEGEN)", "tara_g": 150 },
+    { "name": "Große Schüssel (BITTE WIEGEN)", "tara_g": 300 },
+    { "name": "Teller (BITTE WIEGEN)", "tara_g": 250 }
+  ],
+
+  "routineProfile": [
+    {
+      "name": "Standardtag",
+      "aktiv": true,
+      "aufwachStunde": 7, "aufwachMinute": 0,
+      "cutoffStunde": 21, "cutoffMinute": 0,
+      "slots": [
+        { "stunde": 8,  "minute": 0,  "gewichtProzent": 20, "kochenErlaubt": false, "istShakeSlot": false, "tageszeit": "fruehstueck" },
+        { "stunde": 10, "minute": 30, "gewichtProzent": 15, "kochenErlaubt": false, "istShakeSlot": true,  "tageszeit": "snack" },
+        { "stunde": 13, "minute": 0,  "gewichtProzent": 30, "kochenErlaubt": true,  "istShakeSlot": false, "tageszeit": "mittag" },
+        { "stunde": 16, "minute": 0,  "gewichtProzent": 10, "kochenErlaubt": false, "istShakeSlot": false, "tageszeit": "snack" },
+        { "stunde": 19, "minute": 0,  "gewichtProzent": 25, "kochenErlaubt": true,  "istShakeSlot": false, "tageszeit": "abend" }
+      ]
+    },
+    {
+      "name": "Wochenende",
+      "aktiv": false,
+      "aufwachStunde": 9, "aufwachMinute": 0,
+      "cutoffStunde": 22, "cutoffMinute": 0,
+      "slots": [
+        { "stunde": 11, "minute": 0,  "gewichtProzent": 35, "kochenErlaubt": true,  "istShakeSlot": false, "tageszeit": "fruehstueck" },
+        { "stunde": 15, "minute": 0,  "gewichtProzent": 15, "kochenErlaubt": false, "istShakeSlot": true,  "tageszeit": "snack" },
+        { "stunde": 19, "minute": 30, "gewichtProzent": 30, "kochenErlaubt": true,  "istShakeSlot": false, "tageszeit": "abend" },
+        { "stunde": 21, "minute": 30, "gewichtProzent": 20, "kochenErlaubt": false, "istShakeSlot": false, "tageszeit": "snack" }
+      ]
+    }
+  ]
+}

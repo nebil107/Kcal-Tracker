@@ -1,0 +1,7 @@
+name;kategorie;kcal;protein;fett;kohlenhydrate;feste_portion;portionsname;standardportion_g;shake;kochaufwand;tageszeiten;tags
+Haferflocken;Frühstück;370;13;7;60;nein;;60;ja;keiner;fruehstueck;günstig
+Magerquark;Milchprodukte;67;12;0,3;4;nein;;250;ja;keiner;egal;
+Hähnchenbrust;Eiweißquellen;165;31;3,6;0;nein;;150;nein;mittel;mittag|abend;
+Reis gekocht;Kohlenhydrate;130;2,7;0,3;28;nein;;200;nein;mittel;mittag|abend;
+Proteinriegel;Snacks;220;22;8;18;ja;Riegel;55;nein;keiner;snack;
+Ei;Eiweißquellen;78;6,3;5,3;0,6;ja;Ei;60;nein;keiner;fruehstueck;
