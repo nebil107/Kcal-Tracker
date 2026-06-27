@@ -17,7 +17,7 @@ final class PlanningEngineTests: XCTestCase {
         XCTAssertTrue(plan.slots.allSatisfy { $0.kcalBudget > 0 })
     }
 
-    /// „Bereits gegessen" muss vom verbleibenden Budget abgezogen werden.
+    /// „Bereits gegessen“ muss vom verbleibenden Budget abgezogen werden.
     func testBereitsGegessenReduziertRest() {
         let foods = [macheKandidat(name: "A")]
         let slots = [macheSlot(stunde: 10), macheSlot(stunde: 14), macheSlot(stunde: 18)]
@@ -42,7 +42,7 @@ final class PlanningEngineTests: XCTestCase {
                       "Mindestens ein Slot muss ein Shake sein")
     }
 
-    /// Slots vor „jetzt" oder nach dem Cutoff dürfen nicht geplant werden.
+    /// Slots vor „jetzt“ oder nach dem Cutoff dürfen nicht geplant werden.
     func testCutoffWirdRespektiert() {
         let foods = [macheKandidat(name: "A")]
         let slots = [
@@ -57,7 +57,7 @@ final class PlanningEngineTests: XCTestCase {
         XCTAssertTrue(plan.slots.allSatisfy { $0.uhrzeit >= Uhrzeit(17) && $0.uhrzeit <= Uhrzeit(22) })
     }
 
-    /// Ablehnung („mehrere kleine"): anderes Food im Slot, kleineres Budget hier, Ziel bleibt erhalten.
+    /// Ablehnung („mehrere kleine“): anderes Food im Slot, kleineres Budget hier, Ziel bleibt erhalten.
     func testAblehnungMehrereKleine() {
         let a = macheKandidat(name: "A", magScore: 90)
         let b = macheKandidat(name: "B", magScore: 70)
@@ -74,11 +74,11 @@ final class PlanningEngineTests: XCTestCase {
         let neu = PlanningEngine.lehneAb(slotId: slotId, plan: plan, kontext: kontext, kandidaten: foods)
         let neuerSlot = neu.slots.first { $0.id == slotId }
         XCTAssertNotEqual(neuerSlot?.vorschlag?.foodId, a.id, "Abgelehntes Food darf nicht erneut kommen")
-        XCTAssertLessThan(neuerSlot!.kcalBudget, budgetVorher, "Bei „mehrere kleine" schrumpft der Slot")
+        XCTAssertLessThan(neuerSlot!.kcalBudget, budgetVorher, "Bei „mehrere kleine“ schrumpft der Slot")
         XCTAssertEqual(neu.geplanteKcal, 3000, accuracy: 1.0) // Ziel bleibt erhalten
     }
 
-    /// Ablehnung („wenige große"): gleiches Budget, aber anderes Gericht.
+    /// Ablehnung („wenige große“): gleiches Budget, aber anderes Gericht.
     func testAblehnungWenigeGrosse() {
         let a = macheKandidat(name: "A", magScore: 90)
         let b = macheKandidat(name: "B", magScore: 70)
@@ -93,7 +93,7 @@ final class PlanningEngineTests: XCTestCase {
         let neu = PlanningEngine.lehneAb(slotId: slotId, plan: plan, kontext: kontext, kandidaten: foods)
         let neuerSlot = neu.slots.first { $0.id == slotId }
         XCTAssertEqual(neuerSlot?.vorschlag?.foodId, b.id)
-        XCTAssertEqual(neuerSlot!.kcalBudget, budgetVorher, accuracy: 1.0, "Bei „wenige große" bleibt das Budget gleich")
+        XCTAssertEqual(neuerSlot!.kcalBudget, budgetVorher, accuracy: 1.0, "Bei „wenige große“ bleibt das Budget gleich")
     }
 
     /// nieVorschlagen schließt ein Lebensmittel hart aus.
