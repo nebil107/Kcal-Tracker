@@ -22,7 +22,7 @@ struct PlanView: View {
                 } else {
                     ContentUnavailableView("Kein Plan",
                         systemImage: "calendar.badge.exclamationmark",
-                        description: Text("Lege unter „Routinen" ein aktives Profil mit Essens-Slots an."))
+                        description: Text("Lege unter „Routinen“ ein aktives Profil mit Essens-Slots an."))
                 }
             }
             .navigationTitle("Plan")

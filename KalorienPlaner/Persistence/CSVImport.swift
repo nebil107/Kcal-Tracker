@@ -8,7 +8,7 @@ import SwiftData
 /// - Dezimal-Komma oder -Punkt werden beide verstanden.
 /// - Spalten werden über die Kopfzeile zugeordnet; fehlende Spalten/leere Zellen ändern nichts
 ///   (für neue Einträge gelten Standardwerte).
-/// - „Upsert" per Name: existiert ein Lebensmittel mit gleichem Namen, wird es aktualisiert,
+/// - „Upsert“ per Name: existiert ein Lebensmittel mit gleichem Namen, wird es aktualisiert,
 ///   sonst neu angelegt. (magScore/Lernen bleibt dabei erhalten.)
 enum CSVImport {
 
@@ -40,7 +40,7 @@ enum CSVImport {
 
         let iName = spalte(["name", "lebensmittel"])
         guard let iName else {
-            return Ergebnis(fehler: ["Es fehlt eine Spalte „name" in der Kopfzeile."])
+            return Ergebnis(fehler: ["Es fehlt eine Spalte „name“ in der Kopfzeile."])
         }
         let iKategorie = spalte(["kategorie", "category"])
         let iKcal = spalte(["kcal", "kalorien", "energie", "kcalpro100g", "kcal100g"])

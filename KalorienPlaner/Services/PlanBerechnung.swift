@@ -13,7 +13,7 @@ struct PlanSitzung {
 /// Baut Planungs-Sitzungen aus den SwiftData-Daten und kapselt Annehmen/Ablehnen inkl. Lernen.
 enum PlanBerechnung {
 
-    /// Erstellt eine frische Sitzung für „jetzt".
+    /// Erstellt eine frische Sitzung für „jetzt“.
     static func sitzung(context: ModelContext, settings: AppSettings, jetzt: Date = Date()) -> PlanSitzung? {
         guard let profil = Tagesdaten.aktivesProfil(context: context) else { return nil }
 

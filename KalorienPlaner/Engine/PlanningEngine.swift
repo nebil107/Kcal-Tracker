@@ -3,14 +3,14 @@ import Foundation
 /// Reine, deterministische Planungs-Logik (Herzstück der App). Kein LLM/KI, keine UI, kein SwiftData.
 ///
 /// Ablauf:
-/// 1. Plannbare Slots bestimmen (ab „jetzt", bis „cutoff").
+/// 1. Plannbare Slots bestimmen (ab „jetzt“, bis „cutoff“).
 /// 2. Shake garantieren (mind. `shakeProTag`) – Shake hat höchste Priorität.
 /// 3. Budgets fortlaufend verteilen (`restBudget ÷ restSlots`, gewichtet), mit Shake-Reservierung & Obergrenze.
 /// 4. Je Slot den besten Vorschlag wählen (Ranking) bzw. den Shake zusammenstellen.
 /// 5. Wächter-Warnungen erzeugen (Rückstand, Ziel unrealistisch, …).
 ///
 /// Ablehnung (`lehneAb`) verteilt flexibel um: gleiche Slot-Größe mit anderem Gericht
-/// („wenige große") oder kleiner jetzt + Rest auf spätere Slots („mehrere kleine").
+/// („wenige große“) oder kleiner jetzt + Rest auf spätere Slots („mehrere kleine“).
 enum PlanningEngine {
 
     // Interner Arbeits-Slot während der Planung.
@@ -51,7 +51,7 @@ enum PlanningEngine {
             }
         }
 
-        // „Mehrere kleine": Gewicht des abgelehnten Slots senken → mehr kcal wandern auf spätere Slots.
+        // „Mehrere kleine“: Gewicht des abgelehnten Slots senken → mehr kcal wandern auf spätere Slots.
         if kontext.vorliebe == .mehrereKleine {
             slots[startIndex].gewicht *= 0.55
         }
@@ -320,7 +320,7 @@ enum PlanningEngine {
 
         if keinShakeMoeglich {
             w.append(Warnung(art: .keinShakeMoeglich,
-                text: "Kein Shake möglich – markiere passende Lebensmittel als „shake-tauglich"."))
+                text: "Kein Shake möglich – markiere passende Lebensmittel als „shake-tauglich“."))
         }
 
         // Ziel nicht erreichbar: nennenswerter Rest bleibt unverplant.
@@ -332,7 +332,7 @@ enum PlanningEngine {
                 text: "Einzelne Slots sind an der Obergrenze. Für mehr Spielraum weitere Slots oder Zeit einplanen."))
         }
 
-        // Rückstand: die verbleibenden Slots müssen deutlich mehr tragen als ein „fairer" Slot des ganzen Tages.
+        // Rückstand: die verbleibenden Slots müssen deutlich mehr tragen als ein „fairer“ Slot des ganzen Tages.
         let alleSlots = max(1, kontext.slots.count)
         let komfortProSlot = kontext.kcalZiel / Double(alleSlots)
         let plannbar = max(1, slots.count)

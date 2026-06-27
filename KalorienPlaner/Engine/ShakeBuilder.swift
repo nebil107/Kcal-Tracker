@@ -41,7 +41,7 @@ enum ShakeBuilder {
         return ShakeVorschlag(komponenten: komponenten, gesamtKcal: gesamtKcal, gesamtMakros: gesamtMakros)
     }
 
-    /// Lesbare Beschreibung der Zusammensetzung, z. B. „250 g Milch + 30 g Haferflocken".
+    /// Lesbare Beschreibung der Zusammensetzung, z. B. „250 g Milch + 30 g Haferflocken“.
     static func beschreibung(_ shake: ShakeVorschlag) -> String {
         shake.komponenten
             .map { "\(Format.gramm($0.menge_g)) \($0.name)" }

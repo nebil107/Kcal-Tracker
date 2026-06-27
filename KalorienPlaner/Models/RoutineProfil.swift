@@ -16,7 +16,7 @@ struct SlotVorlage: Codable, Hashable, Identifiable {
     var uhrzeit: Uhrzeit { Uhrzeit(stunde, minute) }
 }
 
-/// Ein Tagesablauf-Profil (z. B. „Arbeitstag", „Wochenende"). Mehrere anlegbar, eines ist aktiv.
+/// Ein Tagesablauf-Profil (z. B. „Arbeitstag“, „Wochenende“). Mehrere anlegbar, eines ist aktiv.
 @Model
 final class RoutineProfil {
     var id: UUID = UUID()

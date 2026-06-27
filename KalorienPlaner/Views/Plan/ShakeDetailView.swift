@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Zeigt die Zusammensetzung eines vorgeschlagenen Shakes. Überschreiben geschieht über
-/// „Ablehnen" im Plan (neu zusammenstellen) bzw. durch Anpassen der Lebensmittel.
+/// „Ablehnen“ im Plan (neu zusammenstellen) bzw. durch Anpassen der Lebensmittel.
 struct ShakeDetailView: View {
     let shake: ShakeVorschlag
     @Environment(\.dismiss) private var dismiss

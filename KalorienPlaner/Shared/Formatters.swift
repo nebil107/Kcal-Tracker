@@ -6,22 +6,22 @@ enum Format {
 
     private static let deLocale = Locale(identifier: "de_DE")
 
-    /// Ganze kcal, z. B. „1.234 kcal".
+    /// Ganze kcal, z. B. „1.234 kcal“.
     static func kcal(_ wert: Double) -> String {
         "\(ganzzahl(wert)) kcal"
     }
 
-    /// Gramm mit einer Nachkommastelle bei Bedarf, z. B. „250 g" oder „37,5 g".
+    /// Gramm mit einer Nachkommastelle bei Bedarf, z. B. „250 g“ oder „37,5 g“.
     static func gramm(_ wert: Double) -> String {
         "\(dezimal(wert, maxNachkomma: 1)) g"
     }
 
-    /// Milliliter, z. B. „1.500 ml".
+    /// Milliliter, z. B. „1.500 ml“.
     static func milliliter(_ wert: Double) -> String {
         "\(ganzzahl(wert)) ml"
     }
 
-    /// Liter-Darstellung für Wasser, z. B. „1,5 L".
+    /// Liter-Darstellung für Wasser, z. B. „1,5 L“.
     static func liter(ausMilliliter ml: Double) -> String {
         "\(dezimal(ml / 1000, maxNachkomma: 2)) L"
     }
@@ -45,7 +45,7 @@ enum Format {
         return f.string(from: NSNumber(value: wert)) ?? "0"
     }
 
-    /// Prozent, z. B. „45 %".
+    /// Prozent, z. B. „45 %“.
     static func prozent(_ anteil0bis1: Double) -> String {
         "\(ganzzahl(anteil0bis1 * 100)) %"
     }

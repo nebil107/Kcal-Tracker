@@ -20,7 +20,7 @@ final class Food {
     var fettPro100g: Double = 0
     var kohlenhydratePro100g: Double = 0
 
-    // Feste Portion (z. B. „1 Riegel = 230 kcal").
+    // Feste Portion (z. B. „1 Riegel = 230 kcal“).
     var istFestePortion: Bool = false
     var festeKcal: Double = 0
     var festeProtein: Double = 0

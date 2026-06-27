@@ -10,7 +10,7 @@ final class AppSettings {
 
     var kcalZiel: Double = 3000
 
-    // Makro-Ziele in Gramm (das ist die angezeigte „Wahrheit").
+    // Makro-Ziele in Gramm (das ist die angezeigte „Wahrheit“).
     var zielProtein_g: Double = 225
     var zielFett_g: Double = 83.3
     var zielKohlenhydrate_g: Double = 337.5

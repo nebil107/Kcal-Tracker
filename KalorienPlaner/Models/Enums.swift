@@ -1,6 +1,6 @@
 import Foundation
 
-// Gemeinsame Aufzählungstypen. Bewusst KEINE feste „Kategorie"-Enum:
+// Gemeinsame Aufzählungstypen. Bewusst KEINE feste „Kategorie“-Enum:
 // Kategorien sind freie Texte (siehe Food.kategorie), damit der Nutzer beliebig
 // neue Kategorien anlegen kann ("alles erweiterbar").
 

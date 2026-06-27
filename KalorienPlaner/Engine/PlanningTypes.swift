@@ -20,7 +20,7 @@ struct Uhrzeit: Codable, Hashable, Comparable {
         lhs.minutenAbMitternacht < rhs.minutenAbMitternacht
     }
 
-    /// Aktuelle Uhrzeit aus einem `Date` (z. B. für „jetzt").
+    /// Aktuelle Uhrzeit aus einem `Date` (z. B. für „jetzt“).
     static func aus(date: Date, kalender: Calendar = .current) -> Uhrzeit {
         let c = kalender.dateComponents([.hour, .minute], from: date)
         return Uhrzeit(c.hour ?? 0, c.minute ?? 0)
@@ -67,7 +67,7 @@ struct FoodKandidat: Identifiable {
     let fettPro100g: Double
     let kohlenhydratePro100g: Double
 
-    // Feste Portion (z. B. „1 Riegel") – dann keine Gramm-Rechnung.
+    // Feste Portion (z. B. „1 Riegel“) – dann keine Gramm-Rechnung.
     let istFestePortion: Bool
     let festeKcal: Double
     let festeMakros: Makros
@@ -127,7 +127,7 @@ struct PlanKontext {
     var bereitsGegessenKcal: Double
     /// Mindest-kcal je Shake (Shake wird zuerst reserviert, bevor andere Slots gefüllt werden).
     var shakeMindestKcal: Double
-    /// Obergrenze je Slot = maxSlotFaktor × fairer Anteil. Verhindert „alles in ein Fenster".
+    /// Obergrenze je Slot = maxSlotFaktor × fairer Anteil. Verhindert „alles in ein Fenster“.
     var maxSlotFaktor: Double
 }
 

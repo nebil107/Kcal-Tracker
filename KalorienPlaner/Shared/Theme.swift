@@ -4,7 +4,7 @@ import UIKit
 /// Zentrale Stelle für Farben, Abstände und Makro-Farbcodes.
 ///
 /// Wichtig laut Spezifikation: Wenn der Nutzer Zielwerte (z. B. das kcal-Ziel von 3000 auf einen
-/// anderen Wert) ändert, darf das Layout nicht „kaputtgehen". Deshalb werden Farben und Abstände
+/// anderen Wert) ändert, darf das Layout nicht „kaputtgehen“. Deshalb werden Farben und Abstände
 /// hier gebündelt und nirgends hartkodiert – Werte fließen immer als Daten in die Views.
 enum Theme {
 
@@ -17,7 +17,7 @@ enum Theme {
     }
 
     // MARK: - Farben
-    /// Akzentfarbe der App (kommt aus dem Asset-Katalog „AccentColor").
+    /// Akzentfarbe der App (kommt aus dem Asset-Katalog „AccentColor“).
     static let akzent = Color.accentColor
 
     static let protein = Color(red: 0.90, green: 0.30, blue: 0.35)   // Rot-Ton
